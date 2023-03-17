@@ -22,12 +22,10 @@ jobs:
         
       - name: Build app
         run: npm run build
-    
-      - name: Start server
-        run: npm run start
-
+        
       - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm start
+          install: false
+          start: npm run start
+          wait-on: 'http://localhost:3000'
