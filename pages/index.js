@@ -16,7 +16,7 @@ function App() {
   const handleAddFruit = (event) => {
     const fruit = fruitInput.current.value.trim().toLowerCase();
     if (fruit === "manzana") {
-      setFruits([...fruits, { name: "🍎 Manzana", isHappy: true }]);
+      setFruits([...fruits, { name: "🍎 Manzanas", isHappy: true }]);
     } else {
       setFruits([...fruits, { name: `🤬 ${fruit}`, isHappy: false }]);
     }
